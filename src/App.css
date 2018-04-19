@@ -1,12 +1,19 @@
 .App {
+  background: #222222;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Tajawal';
+  color: #dddddd;
+}
+
+.appContainer {
   background-image: linear-gradient(rgba(34,34,34,0.5),rgba(34,34,34,0.5)), url('./assets/nikita-kachanovsky-445394-unsplash.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   position: relative;
-
-  color: #dddddd;
 }
 
 .App::after {

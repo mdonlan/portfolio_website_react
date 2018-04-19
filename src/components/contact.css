@@ -4,15 +4,23 @@
   align-items: center;
   justify-content: center;
   background: rgb(9, 60, 126);
-
+  height: 50%;
   position: relative;
 }
 
 .contactTitle {
   position: absolute;
   top: 10px;
+  font-size: 32px;
+  
 }
 
 .contactText {
-  width: 500px;
+  width: 600px;
+  text-align: center;
+}
+
+.green {
+  color: #2bf786;
+  border-bottom: 1px solid #2bf786;
 }

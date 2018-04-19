@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Bounce from 'react-reveal/Bounce';
+import Fade from 'react-reveal/Fade';
 
 import './projects.css';
 
@@ -31,41 +33,47 @@ class Projects extends Component {
   render() {
     return (
       <div className="page projectsPage">
-        <div className='projectsTitle'>Projects</div>
+
+        <Fade top>
+          <div className='projectsTitle'>Projects</div>
+        </Fade>
+        
         <div className='projectsContainer'>
           {projects.map((project) => { 
             return (
-              <div key={project.name} className='project'>
+              <Bounce left cascade>
+                <div key={project.name} className='project'>
 
-                <div className='browser'>
-                    <div className='browserTopNav'>
-                      <div className='broswerNavButtons'>
-                        <div className='browserNavButtonBack broswerNavButton'><i className="fa fa-arrow-left"></i></div>
-                        <div className='browserNavButtonForward broswerNavButton'><i className="fa fa-arrow-right"></i></div>
-                        <div className='browserNavButtonRefresh broswerNavButton'><i className="fa fa-sync"></i></div>
+                  <div className='browser'>
+                      <div className='browserTopNav'>
+                        <div className='broswerNavButtons'>
+                          <div className='browserNavButtonBack broswerNavButton'><i className="fa fa-arrow-left"></i></div>
+                          <div className='browserNavButtonForward broswerNavButton'><i className="fa fa-arrow-right"></i></div>
+                          <div className='browserNavButtonRefresh broswerNavButton'><i className="fa fa-sync"></i></div>
+                        </div>
+                        <div className='browserWindowButtonsContainer'>
+                          <div className='browserWindowButton'></div>
+                          <div className='browserWindowButton'></div>
+                          <div className='browserWindowButton'></div>
+                        </div>
+                        <div className='broswerSearchBar'></div>
                       </div>
-                      <div className='browserWindowButtonsContainer'>
-                        <div className='browserWindowButton'></div>
-                        <div className='browserWindowButton'></div>
-                        <div className='browserWindowButton'></div>
+                      <div className='browserImgContainer'>
+                        <img className='browserImg' src={require('../assets/projectImages/' + project.imageName)}/>
                       </div>
-                      <div className='broswerSearchBar'></div>
                     </div>
-                    <div className='browserImgContainer'>
-                      <img className='browserImg' src={require('../assets/projectImages/' + project.imageName)}/>
-                    </div>
-                  </div>
 
-                  <div className='projectText'>
-                    <div className='projectTitle'>{project.name}</div>
-                    <div className='projectDescription'>{project.description}</div>
-                    <div className='projectLinksContainer'>
-                      <a className='projectLink' href={project.demoLink}>DEMO</a>
-                      <a className='projectLink' href={project.githubLink}>GITHUB</a>
-                    </div>
-                  </div> 
+                    <div className='projectText'>
+                      <div className='projectTitle'>{project.name}</div>
+                      <div className='projectDescription'>{project.description}</div>
+                      <div className='projectLinksContainer'>
+                        <a className='projectLink' href={project.demoLink}>DEMO</a>
+                        <a className='projectLink' href={project.githubLink}>GITHUB</a>
+                      </div>
+                    </div> 
 
-              </div>
+                </div>
+              </Bounce>
             )
           })}  
         </div>

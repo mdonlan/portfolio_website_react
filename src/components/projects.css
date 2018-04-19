@@ -42,12 +42,14 @@
   width: 225px;
   text-align: center;
   padding-bottom: 3px;
+  font-size: 18px;
 } 
 
 .projectDescription {
   width: 80%;
   height: 80px;
   text-align: center;
+  color: #dddddd;
 }
 
 .projectLinksContainer {

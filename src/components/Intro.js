@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import Fade from 'react-reveal/Fade';
 import scrollToElement from 'scroll-to-element'
 
 import './intro.css'
@@ -31,15 +32,17 @@ class Intro extends Component {
 
   render() {
     return (
-      <div className="introPage">
-        <div className="backgroundOpactiy"></div>
-        <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
-        <div className="nav">
-          <div className="navButton" onClick={this.navOnClick}>Projects</div>
-          <div className="navButton" onClick={this.navOnClick}>About</div>
-          <div className="navButton" onClick={this.navOnClick}>Contact</div>
+      <Fade duration={4000}>
+        <div className="introPage">
+          <div className="backgroundOpactiy"></div>
+          <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
+          <div className="nav">
+            <div className="navButton" onClick={this.navOnClick}>Projects</div>
+            <div className="navButton" onClick={this.navOnClick}>About</div>
+            <div className="navButton" onClick={this.navOnClick}>Contact</div>
+          </div>
         </div>
-      </div>
+      </Fade>
     )
   }
 }
