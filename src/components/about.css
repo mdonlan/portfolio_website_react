@@ -1,0 +1,19 @@
+.aboutPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(24, 71, 201);
+
+
+  position: relative;
+}
+
+.aboutTitle {
+  position: absolute;
+  top: 10px;
+}
+
+.aboutText {
+  width: 500px;
+}

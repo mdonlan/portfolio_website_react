@@ -1,0 +1,18 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(9, 60, 126);
+
+  position: relative;
+}
+
+.contactTitle {
+  position: absolute;
+  top: 10px;
+}
+
+.contactText {
+  width: 500px;
+}
