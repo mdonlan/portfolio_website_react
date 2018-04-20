@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+  background: #222222;
+  background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
 }
 
 .projectsTitle {

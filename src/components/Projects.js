@@ -41,8 +41,8 @@ class Projects extends Component {
         <div className='projectsContainer'>
           {projects.map((project) => { 
             return (
-              <Bounce left cascade>
-                <div key={project.name} className='project'>
+              <Bounce left cascade key={project.name}>
+                <div className='project'>
 
                   <div className='browser'>
                       <div className='browserTopNav'>

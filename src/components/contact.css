@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(9, 60, 126);
+  background-color: #082a57;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
   height: 50%;
   position: relative;
 }
