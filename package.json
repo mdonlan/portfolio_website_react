@@ -2,7 +2,7 @@
   "name": "portfolio-website-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mdonlan.github.io/portfolio_website_react/",
+  "homepage": "https://mdonlan.github.io/",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.3.2",
