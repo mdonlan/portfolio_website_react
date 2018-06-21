@@ -59,7 +59,7 @@ class Projects extends Component {
                         <div className='broswerSearchBar'></div>
                       </div>
                       <div className='browserImgContainer'>
-                        <img className='browserImg' src={require('../assets/projectImages/' + project.imageName)}/>
+                        <img className='browserImg' alt={project.imageName} src={require('../assets/projectImages/' + project.imageName)}/>
                       </div>
                     </div>
 

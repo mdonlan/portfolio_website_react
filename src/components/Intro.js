@@ -41,6 +41,7 @@ class Intro extends Component {
             <div className="navButton" onClick={this.navOnClick}>About</div>
             <div className="navButton" onClick={this.navOnClick}>Contact</div>
           </div>
+          <canvas className='canvas'></canvas>
         </div>
       </Fade>
     )

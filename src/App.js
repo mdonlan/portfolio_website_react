@@ -8,19 +8,20 @@ import Intro from './components/Intro'
 import Contact from './components/Contact'
 import About from './components/About'
 
+import particles from './canvasParticles.js'
+
 class App extends Component {
   render() {
     return (
-        <div className="App">
-          <Fade duration={1000}>
-            <div className='appContainer'> 
-              <Intro />
-              <Projects ref='projects' />
-              <About />
-              <Contact />
-            </div>
-          </Fade>
-        </div>
+      <div className="App">
+          <div className='appContainer'> 
+            
+            <Intro />
+            <Projects ref='projects' />
+            <About />
+            <Contact />
+          </div>
+      </div>
     );
   }
 }

@@ -29,3 +29,8 @@
   width: 100%;
   background: #222222;
 }
+
+.canvas {
+  position: absolute;
+  z-index: -1;
+}
