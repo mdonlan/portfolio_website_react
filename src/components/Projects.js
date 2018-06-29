@@ -26,6 +26,20 @@ const projects = [
     githubLink: 'https://github.com/mdonlan/tvApp',
     imageName: 'tvAppImg.PNG',
   },
+  {
+    name: 'Todo App',
+    description: 'Manage your lists and todos easily with this React based app. All data is stored with firebase.',
+    demoLink: 'https://mdonlan.github.io/react_todo/',
+    githubLink: 'https://github.com/mdonlan/react_todo',
+    imageName: 'react_todo.PNG',
+  },
+  {
+    name: 'Canvas Particles',
+    description: 'A canvas experiment that creates particles that move and interact with eachother and the user.',
+    demoLink: 'https://mdonlan.github.io/canvas-particles/',
+    githubLink: 'https://github.com/mdonlan/canvas-particles',
+    imageName: 'react_todo.PNG',
+  },
 ]
 
 

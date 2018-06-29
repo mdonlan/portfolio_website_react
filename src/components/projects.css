@@ -19,13 +19,14 @@
 
 .projectsContainer {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 150px;
+  width: 90%;
 }
 
 .project {
   margin-left: 15px;
   margin-right: 15px;
-  height: 450px;
   width: 500px;
 }
 
