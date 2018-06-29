@@ -1,8 +1,9 @@
 {
   "main.css": "static/css/main.62198dd5.css",
   "main.css.map": "static/css/main.62198dd5.css.map",
-  "main.js": "static/js/main.8c957299.js",
-  "main.js.map": "static/js/main.8c957299.js.map",
+  "main.js": "static/js/main.60a74d50.js",
+  "main.js.map": "static/js/main.60a74d50.js.map",
+  "static\\media\\canvasParticles.PNG": "static/media/canvasParticles.77a12a31.PNG",
   "static\\media\\nikita-kachanovsky-445394-unsplash.jpg": "static/media/nikita-kachanovsky-445394-unsplash.b158825b.jpg",
   "static\\media\\react_todo.PNG": "static/media/react_todo.efcabeef.PNG",
   "static\\media\\spaceGame.PNG": "static/media/spaceGame.6fee5d71.PNG",
