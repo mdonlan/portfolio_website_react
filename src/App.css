@@ -8,7 +8,7 @@
 }
 
 .appContainer {
-  background-image: linear-gradient(rgba(34,34,34,0.5),rgba(34,34,34,0.5)), url('./assets/nikita-kachanovsky-445394-unsplash.jpg');
+  /* background-image: linear-gradient(rgba(34,34,34,0.5),rgba(34,34,34,0.5)), url('./assets/nikita-kachanovsky-445394-unsplash.jpg'); */
   background-size: 100%;
   background-repeat: no-repeat;
   height: 100%;

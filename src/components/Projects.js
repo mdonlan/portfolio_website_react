@@ -38,7 +38,7 @@ const projects = [
     description: 'A canvas experiment that creates particles that move and interact with eachother and the user.',
     demoLink: 'https://mdonlan.github.io/canvas-particles/',
     githubLink: 'https://github.com/mdonlan/canvas-particles',
-    imageName: 'react_todo.PNG',
+    imageName: 'canvasParticles.PNG',
   },
 ]
 

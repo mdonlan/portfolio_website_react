@@ -5,6 +5,7 @@
   position: relative;
   background: #222222;
   background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
+  z-index: 1;
 }
 
 .projectsTitle {
@@ -20,6 +21,8 @@
 .projectsContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 150px;
   width: 90%;
 }

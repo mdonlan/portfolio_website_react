@@ -34,6 +34,7 @@ let frameInterval = 1;
 let mouseOffset = null;
 let mouseIsOverControlPanel = false;
 let moveSpeedInRadius = 10;
+let stop = false;
 
 //
 // main update loop
@@ -87,7 +88,10 @@ function update() {
   updateUI();
 
   getFPS();
-  window.requestAnimationFrame(update);
+  if(!stop) {
+    window.requestAnimationFrame(update);
+  }
+  
 };
 
 function createParticle() {
@@ -262,7 +266,7 @@ function updateUI() {
     // if particle speed setting has changed
     //particleSpeedElem.innerHTML = particleSpeed;
     oldParticleSpeed = particleSpeed;
-    console.log('updating particle speed');
+    //console.log('updating particle speed');
   }
 
   // connection distance
@@ -270,7 +274,7 @@ function updateUI() {
     // if particle speed setting has changed
     //connectionDistanceElem.innerHTML = connectionDistance;
     oldConnectionDistance = connectionDistance;
-    console.log('updating connection distance speed');
+    //console.log('updating connection distance speed');
   }
 
   // number of particles
@@ -278,7 +282,7 @@ function updateUI() {
     // if particle speed setting has changed
     //numParticlesElem.innerHTML = numParticles;
     oldNumParticles = numParticles;
-    console.log('updating number of particles');
+    //console.log('updating number of particles');
   }
 
   // max connections
@@ -286,7 +290,7 @@ function updateUI() {
     // if particle speed setting has changed
     //maxConnectionsElem.innerHTML = maxConnections;
     oldMaxConnections = maxConnections;
-    console.log('updating number of max connections');
+    //console.log('updating number of max connections');
   }
 
   // mouse radius size
@@ -294,7 +298,7 @@ function updateUI() {
     // if particle speed setting has changed
     //mouseRadiusElem.innerHTML = mouseRadius;
     oldMouseRadius = mouseRadius;
-    console.log('updating mouse radius size');
+    //console.log('updating mouse radius size');
   }
 };
 
@@ -393,14 +397,16 @@ function drawLine(point1, point2, distance) {
   ctx.closePath();
 };
 
-window.onload = function() {
-  console.log('testing123')
+function preStart() {
+  // prepares some enviroment vars for start()
 
   canvas = document.querySelector(".canvas");
-  console.log(canvas)
-  // set canvas to full window size
-  canvas.width = window.innerWidth - 20;
-  canvas.height = window.innerHeight;
+  // set height and width of canvas to match the background image size
+  let backgroundImage = document.querySelector(".backgroundImage");
+  let introPage = document.querySelector(".introPage");
+  console.log(introPage.clientHeight)
+  canvas.width = backgroundImage.width;
+  canvas.height = introPage.clientHeight;
   ctx = canvas.getContext('2d');
   canvasHeight = canvas.height;
   canvasWidth = canvas.width;
@@ -411,4 +417,28 @@ window.onload = function() {
   //document.querySelector("body").addEventListener("mousedown", mouseDown);
 
   start();
+};  
+
+window.onload = function() {
+  preStart();
 }
+
+function stopParticles() {
+  // stops the canvas, so that we can reload it
+  stop = true;
+  setTimeout(() => {
+    clear();
+    particles = [];
+    stop = false;
+    preStart();
+  }, 100);
+
+};
+
+window.onresize = function() {
+  console.log('resizing canvas')
+  let backgroundImage = document.querySelector(".backgroundImage");
+  let introPage = document.querySelector(".introPage");
+  introPage.style.height = backgroundImage.height + 'px';
+  stopParticles();
+};

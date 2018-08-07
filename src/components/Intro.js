@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
 import scrollToElement from 'scroll-to-element'
 
+import backgroundImage from '../assets/1.jpg' // relative path to image
+
 import './intro.css'
 
 class Intro extends Component {
@@ -10,6 +12,10 @@ class Intro extends Component {
   constructor(props) {
     super(props);
     this.navOnClick = this.navOnClick.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resizeEvent);
   }
 
   navOnClick(e) {
@@ -28,12 +34,33 @@ class Intro extends Component {
       ease: 'outSine',
       duration: 1000
     });
-  }
+  };
+
+  handleImageLoaded() {
+    console.log('background image has loaded...')
+    let backgroundImage = document.querySelector(".backgroundImage");
+    let introPage = document.querySelector(".introPage");
+    introPage.style.height = backgroundImage.height + 'px';
+  };
+
+  resizeEvent(e) {
+    // on a page resize completely reload the page
+    // this seems like the simplest solution for reloading the canvas and image
+    // and getting the sizing right
+
+    
+
+
+    setTimeout(() => {
+      //this.location.reload(false); /* false to get page from cache */
+    }, 100);
+  };
 
   render() {
     return (
       <Fade duration={4000}>
         <div className="introPage">
+          <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img>
           <div className="backgroundOpactiy"></div>
           <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
           <div className="nav">
