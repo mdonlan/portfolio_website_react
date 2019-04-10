@@ -4,75 +4,59 @@ import Fade from 'react-reveal/Fade';
 import scrollToElement from 'scroll-to-element'
 
 import backgroundImage from '../assets/1.jpg' // relative path to image
-
 import './intro.css'
+
+import particles from '../canvasParticles';
 
 class Intro extends Component {
 
-  constructor(props) {
-    super(props);
-    this.navOnClick = this.navOnClick.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener("resize", this.resizeEvent);
-  }
-
-  navOnClick(e) {
-    let targetElem;
-    const target = e.target.textContent;
-    if(target === 'Projects') {
-      targetElem = '.projectsPage'
-    } else if (target === 'About') {
-      targetElem = '.aboutPage'
-    } else if (target === 'Contact') {
-      targetElem = '.contactPage'
+    constructor(props) {
+        super(props);
     }
 
-    scrollToElement(targetElem, {
-      offset: 0,
-      ease: 'outSine',
-      duration: 1000
-    });
-  };
+    componentDidMount() {
+        window.addEventListener("resize", this.resizeEvent);
+    }
 
-  handleImageLoaded() {
-    console.log('background image has loaded...')
-    let backgroundImage = document.querySelector(".backgroundImage");
-    let introPage = document.querySelector(".introPage");
-    introPage.style.height = backgroundImage.height + 'px';
-  };
+    navOnClick(e) {
+        let targetElem;
+        const target = e.target.textContent;
+        if(target === 'Projects') {
+            targetElem = '.projectsPage'
+        } else if (target === 'About') {
+            targetElem = '.aboutPage'
+        } else if (target === 'Contact') {
+            targetElem = '.contactPage'
+        }
 
-  resizeEvent(e) {
-    // on a page resize completely reload the page
-    // this seems like the simplest solution for reloading the canvas and image
-    // and getting the sizing right
+        scrollToElement(targetElem, { offset: 0, ease: 'outSine', duration: 1000 });
+    };
 
-    
+    handleImageLoaded = () => {
+        console.log('background image has loaded...')
+        let backgroundImage = document.querySelector(".backgroundImage");
+        let introPage = document.querySelector(".introPage");
+        introPage.style.height = backgroundImage.height + 'px';
+        this.props.setImgLoaded();
+    };
 
-
-    setTimeout(() => {
-      //this.location.reload(false); /* false to get page from cache */
-    }, 100);
-  };
-
-  render() {
-    return (
-      <Fade duration={4000}>
-        <div className="introPage">
-          <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img>
-          <div className="backgroundOpactiy"></div>
-          <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
-          <div className="nav">
-            <div className="navButton" onClick={this.navOnClick}>Projects</div>
-            <div className="navButton" onClick={this.navOnClick}>About</div>
-            <div className="navButton" onClick={this.navOnClick}>Contact</div>
-          </div>
-          <canvas className='canvas'></canvas>
-        </div>
-      </Fade>
-    )
-  }
+    render() {
+        return (
+            <Fade duration={4000}>
+                <div className="introPage">
+                    <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img>
+                    <div className="backgroundOpactiy"></div>
+                    <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
+                    <div className="nav">
+                        <div className="navButton" onClick={this.navOnClick}>Projects</div>
+                        <div className="navButton" onClick={this.navOnClick}>About</div>
+                        <div className="navButton" onClick={this.navOnClick}>Contact</div>
+                    </div>
+                    <canvas className='canvas'></canvas>
+                </div>
+            </Fade>
+        )
+    }
 }
 
 export default Intro;

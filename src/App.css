@@ -6,31 +6,3 @@
   font-family: 'Tajawal';
   color: #dddddd;
 }
-
-.appContainer {
-  /* background-image: linear-gradient(rgba(34,34,34,0.5),rgba(34,34,34,0.5)), url('./assets/nikita-kachanovsky-445394-unsplash.jpg'); */
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.App::after {
-  height: 100%;
-  width: 100%;
-  opacity: 0.5;
-  background: #222222;
-  position: absolute;
-}
-
-.page {
-  min-height: 100%;
-  width: 100%;
-  background: #222222;
-}
-
-.canvas {
-  position: absolute;
-  z-index: -1;
-}
