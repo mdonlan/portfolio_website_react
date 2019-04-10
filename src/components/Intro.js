@@ -46,7 +46,7 @@ class Intro extends Component {
                 <div className="introPage">
                     <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img>
                     <div className="backgroundOpactiy"></div>
-                    <div className="greeting">Hi I'm Michael. Im a front-end web developer located in Portland, Maine.</div>
+                    <div className="greeting">Hi I'm Michael. I'm a front-end web developer located in Portland, Maine.</div>
                     <div className="nav">
                         <div className="navButton" onClick={this.navOnClick}>Projects</div>
                         <div className="navButton" onClick={this.navOnClick}>About</div>
