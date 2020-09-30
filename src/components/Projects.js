@@ -13,13 +13,6 @@ const projects = [
     imageName: 'twitchSmall.PNG',
   },
   {
-    name: 'Space Game',
-    description: 'A space themed game made with Phaser.js. Try to shoot or dodge the asteroids in your way as you fly through space.',
-    demoLink: 'https://mdonlan.github.io/phaserSpaceGame/',
-    githubLink: 'https://github.com/mdonlan/phaserSpaceGame',
-    imageName: 'spaceGame.PNG',
-  },
-  {
     name: 'Tv Tracker',
     description: 'Never miss a show again! Keep track of all your favorite TV shows and see if they are airing this week.',
     demoLink: 'https://mdonlan.github.io/tvApp/',
