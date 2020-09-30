@@ -6,7 +6,7 @@ import scrollToElement from 'scroll-to-element'
 import backgroundImage from '../assets/1.jpg' // relative path to image
 import './intro.css'
 
-import particles from '../canvasParticles';
+import particles from '../canvas_particles';
 
 class Intro extends Component {
 

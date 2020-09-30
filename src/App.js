@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Projects from './components/Projects'
+import {Projects} from './components/Projects'
 import Intro from './components/Intro'
 import Contact from './components/Contact'
 import About from './components/About'
