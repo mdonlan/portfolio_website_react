@@ -22,13 +22,11 @@ class App extends Component {
         return (
             <div className="App">
                 <Intro setImgLoaded={this.setImgLoaded}/>
-                {this.state.imgLoaded &&
-                    <div>
-                        <Projects/>
-                        <About />
-                        <Contact />
-                    </div>
-                }
+                <div>
+                    <Projects/>
+                    <About />
+                    <Contact />
+                </div>
             </div>
         );
     }

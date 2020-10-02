@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 import Fade from 'react-reveal/Fade';
 import scrollToElement from 'scroll-to-element'
 
-import backgroundImage from '../assets/1.jpg' // relative path to image
+// import backgroundImage from '../assets/1.jpg' // relative path to image
 import './intro.css'
 
-import particles from '../canvas_particles';
+// import particles from '../canvas_particles';
 
 class Intro extends Component {
 
@@ -32,19 +32,19 @@ class Intro extends Component {
         scrollToElement(targetElem, { offset: 0, ease: 'outSine', duration: 1000 });
     };
 
-    handleImageLoaded = () => {
-        console.log('background image has loaded...')
-        let backgroundImage = document.querySelector(".backgroundImage");
-        let introPage = document.querySelector(".introPage");
-        introPage.style.height = backgroundImage.height + 'px';
-        this.props.setImgLoaded();
-    };
+    // handleImageLoaded = () => {
+    //     console.log('background image has loaded...')
+    //     let backgroundImage = document.querySelector(".backgroundImage");
+    //     let introPage = document.querySelector(".introPage");
+    //     introPage.style.height = backgroundImage.height + 'px';
+    //     this.props.setImgLoaded();
+    // };
 
     render() {
         return (
             <Fade duration={4000}>
                 <div className="introPage">
-                    <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img>
+                    {/* <img className="backgroundImage" src={backgroundImage} onLoad={this.handleImageLoaded}></img> */}
                     <div className="backgroundOpactiy"></div>
                     <div className="greeting">Hi I'm Michael. I'm a front-end web developer located in Portland, Maine.</div>
                     <div className="nav">

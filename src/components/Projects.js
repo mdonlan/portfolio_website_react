@@ -5,6 +5,12 @@ import './projects.css';
 
 const projects = [
   {
+    name: 'Twitch App',
+    demoLink: 'https://mdonlan.github.io/twitch_tv_app/#/',
+    githubLink: 'https://github.com/mdonlan/twitch_tv_app',
+    imageName: 'twitch_app.PNG',
+  },
+  {
     name: 'Tv Tracker',
     demoLink: 'https://mdonlan.github.io/tvApp/',
     githubLink: 'https://github.com/mdonlan/tvApp',
