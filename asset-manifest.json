@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.e2e8a459.css",
-  "main.css.map": "static/css/main.e2e8a459.css.map",
-  "main.js": "static/js/main.3b64459f.js",
-  "main.js.map": "static/js/main.3b64459f.js.map",
+  "main.css": "static/css/main.b59a9cbd.css",
+  "main.css.map": "static/css/main.b59a9cbd.css.map",
+  "main.js": "static/js/main.362cd8c1.js",
+  "main.js.map": "static/js/main.362cd8c1.js.map",
   "static\\media\\canvasParticles.PNG": "static/media/canvasParticles.77a12a31.PNG",
   "static\\media\\particles.PNG": "static/media/particles.d4ee093b.PNG",
   "static\\media\\react_todo.PNG": "static/media/react_todo.efcabeef.PNG",
@@ -12,5 +12,5 @@
   "static\\media\\twitchImg.PNG": "static/media/twitchImg.682e3224.PNG",
   "static\\media\\twitchLarge.PNG": "static/media/twitchLarge.c6dd1a27.PNG",
   "static\\media\\twitchSmall.PNG": "static/media/twitchSmall.c760d4c4.PNG",
-  "static\\media\\twitch_app.PNG": "static/media/twitch_app.991d6c76.PNG"
+  "static\\media\\twitch_app.PNG": "static/media/twitch_app.58e77401.PNG"
 }
