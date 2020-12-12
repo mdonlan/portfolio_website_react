@@ -1,29 +1,42 @@
-import React, { Component } from 'react'
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
+import React from 'react'
+import styled from 'styled-components'
 
-import './contact.css';
-
-class Contact extends Component {
-  render() {
-    return (
-      <div className="contactPage">
-        <Fade top>
-          <div className='contactTitle'>Contact</div>
-        </Fade>
-        
-        <Slide left>
-        <div className="contactText">
-          <div>Please feel free to contact me if you have any business inquiries or questions.</div>
-          <p />
-          <div>I am currently <span className='green'>available</span> for work.</div>
-          <p />
-          <div>me@michaeldonlan.com</div>
-        </div>
-        </Slide>
-      </div>
-    )
-  }
+export function Contact() {
+	return (
+		<Wrapper className="contact_page">
+			<Title>Contact</Title>
+			<Text>
+				<div>Please feel free to contact me if you have any business inquiries or questions.</div>
+				<p />
+				<div>I am currently <Green href="mailto:me@michaeldonlan.com">available</Green> for work.</div>
+				<p />
+			</Text>
+		</Wrapper>
+	)
 }
 
-export default Contact;
+const Wrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #111111;
+	padding-top: 50px;
+	padding-bottom: 100px;
+`
+
+const Title = styled.div`
+	font-size: 32px;
+	margin-bottom: 20px;
+`
+
+const Text = styled.div`
+	max-width: 500px;
+	text-align: center;
+`
+
+const Green = styled.a`
+	color: #2bf786;
+	border-bottom: 1px solid #2bf786;
+	text-decoration: none;
+`
